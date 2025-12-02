@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <title>АКВА ТРЕЙ ЛОГІСТІК – паливна логістика на Дунаї</title>
+  <title>АКВА ТРЕЙД ЛОГІСТІК – паливна логістика на Дунаї</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="АКВА ТРЕЙД ЛОГІСТІК – перевалка дизельного палива та бензину, навантаження у залізничні цистерни та автотранспорт. Надійна логістика пального від причалу до клієнта.">
   <style>
@@ -226,6 +226,27 @@
       opacity: 0.96;
     }
 
+    .btn-ghost {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.9);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-main);
+      cursor: pointer;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease, opacity 0.16s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15,23,42,0.9);
+      border-color: rgba(148,163,184,1);
+      opacity: 0.96;
+    }
+
     .hero-note {
       font-size: 11px;
       color: var(--text-muted);
@@ -278,6 +299,54 @@
     .flow-arrow {
       font-size: 14px;
       color: var(--accent-muted);
+    }
+
+    /* METRICS */
+
+    .metrics {
+      margin-top: 32px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at top left, #020617, #02040a 70%);
+      padding: 18px 20px 16px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .metric-item {
+      border-left: 1px solid rgba(31,41,55,0.9);
+      padding-left: 14px;
+    }
+
+    .metric-item:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .metric-value {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #f9fafb;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+    }
+
+    .metric-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 10px;
     }
 
     /* SECTIONS */
@@ -342,6 +411,48 @@
     .service-text {
       font-size: 13px;
       color: var(--text-muted);
+    }
+
+    /* CLIENT TYPES */
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .client-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31,41,55,0.9);
+      background: #020617;
+      padding: 14px 14px 12px;
+      min-height: 90px;
+    }
+
+    .client-name {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .client-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .cases-list {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    .cases-list li::before {
+      content: "— ";
+      color: var(--accent-muted);
     }
 
     /* FLOW STEPS */
@@ -578,6 +689,145 @@
       flex-wrap: wrap;
     }
 
+    /* MODAL */
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 20px;
+      background: #020617;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 30px 100px rgba(0,0,0,0.95);
+      padding: 18px 20px 18px;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .modal-close {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0 0 2px 0;
+    }
+
+    .modal-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .modal-field label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .modal-input,
+    .modal-textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(31,41,55,0.9);
+      background: #020617;
+      color: var(--text-main);
+      font-size: 13px;
+      padding: 8px 11px;
+      outline: none;
+    }
+
+    .modal-textarea {
+      border-radius: 14px;
+      min-height: 70px;
+      resize: vertical;
+      padding: 8px 11px;
+    }
+
+    .modal-input:focus,
+    .modal-textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 8px;
+      align-items: center;
+    }
+
+    .modal-info {
+      font-size: 11px;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    .btn-secondary {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.9);
+      background: transparent;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.16s ease, color 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15,23,42,0.9);
+      color: var(--text-main);
+    }
+
+    .btn-modal-primary {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(to right, #fbbf24, #f59e0b);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #111827;
+      cursor: pointer;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.9);
+    }
+
     @media (max-width: 900px) {
       .hero-inner {
         grid-template-columns: minmax(0, 1fr);
@@ -591,8 +841,12 @@
         padding-top: 18px;
       }
       .services-grid,
-      .steps-grid {
+      .steps-grid,
+      .clients-grid {
         grid-template-columns: minmax(0,1fr);
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .contacts {
         grid-template-columns: minmax(0,1fr);
@@ -605,6 +859,10 @@
       }
       .gallery-track {
         height: 260px;
+      }
+      .metric-item {
+        border-left: none;
+        padding-left: 0;
       }
     }
   </style>
@@ -622,6 +880,7 @@
       <nav>
         <a href="#about">Про нас</a>
         <a href="#services">Послуги</a>
+        <a href="#clients">Клієнти</a>
         <a href="#flow">Схема</a>
         <a href="#gallery">Галерея</a>
         <a href="#contacts">Контакти</a>
@@ -646,8 +905,11 @@
               точності обліку, безпеці операцій та таймінгу відвантажень.
             </p>
             <div class="hero-actions">
-              <button class="btn-primary" type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">
-                Зв'язатися
+              <button class="btn-primary" type="button" data-open-modal="request">
+                Надіслати запит
+              </button>
+              <button class="btn-ghost" type="button" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">
+                Контакти
               </button>
               <div class="hero-note">
                 Обговоримо обсяги, напрямки, графік суднозаходів та формат співпраці.
@@ -676,6 +938,31 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- METRICS -->
+      <section class="metrics">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-value">7+ років</div>
+            <div class="metric-label">досвіду в паливній логістиці</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">до 7 000 т</div>
+            <div class="metric-label">партія танкера</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">24/7</div>
+            <div class="metric-label">вікна відвантаження</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">ЖД + авто</div>
+            <div class="metric-label">напрямки відправки</div>
+          </div>
+        </div>
+        <div class="metric-note">
+          Значення можуть бути адаптовані під фактичні обсяги та формат роботи компанії.
         </div>
       </section>
 
@@ -714,6 +1001,50 @@
             </p>
           </article>
         </div>
+      </section>
+
+      <!-- CLIENT TYPES & CASES -->
+      <section id="clients">
+        <div class="section-header">
+          <div class="section-left">
+            <div class="section-kicker">для кого</div>
+            <h2 class="section-title">Клієнти, з якими ми працюємо</h2>
+            <p class="section-sub">
+              Працюємо з компаніями, для яких пальне — ключовий ресурс бізнесу та важлива частина фінансового результату.
+            </p>
+          </div>
+        </div>
+        <div class="clients-grid">
+          <article class="client-card">
+            <div class="client-name">Трейдери пального</div>
+            <p class="client-text">
+              Операції з великими партіями, гнучкий графік відвантажень, прозорий облік.
+            </p>
+          </article>
+          <article class="client-card">
+            <div class="client-name">Імпортні компанії</div>
+            <p class="client-text">
+              Прийом суден, перевалка в резервуари та подальша логістика вглиб країни.
+            </p>
+          </article>
+          <article class="client-card">
+            <div class="client-name">Мережі АЗС</div>
+            <p class="client-text">
+              Централізовані поставки на мережу, стабільність обсягів та таймінгів.
+            </p>
+          </article>
+          <article class="client-card">
+            <div class="client-name">Аграрні та промислові споживачі</div>
+            <p class="client-text">
+              Забезпечення пального під сезонні піки та великі виробничі програми.
+            </p>
+          </article>
+        </div>
+        <ul class="cases-list">
+          <li>танкери до 7 000 т із подальшим розподілом на ЖД та авто</li>
+          <li>поставки під сезонні піки для агро та промисловості</li>
+          <li>гнучкий графік відвантажень під модель клієнта</li>
+        </ul>
       </section>
 
       <!-- FLOW -->
@@ -778,8 +1109,7 @@
             <div class="section-kicker">галерея</div>
             <h2 class="section-title">Робочі процеси АКВА ТРЕЙД ЛОГІСТІК</h2>
             <p class="section-sub">
-              Кадри з причалу, перевалки та танкерів — робоче середовище компанії
-              без зайвого глянцю.
+              Кадри з причалу, перевалки та танкерів — робоче середовище компанії без зайвого глянцю.
             </p>
           </div>
         </div>
@@ -852,7 +1182,48 @@
     </footer>
   </div>
 
+  <!-- MODAL: REQUEST -->
+  <div class="modal-backdrop" id="request-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Запит на співпрацю</div>
+        </div>
+        <button class="modal-close" type="button" aria-label="Закрити">×</button>
+      </div>
+      <div class="modal-sub">
+        Коротко опишіть продукт, обсяг та бажаний напрямок відвантаження — ми повернемося з відповіддю.
+      </div>
+      <form class="modal-form" id="request-form">
+        <div class="modal-field">
+          <label for="req-name">Ім'я / Контактна особа</label>
+          <input id="req-name" name="name" class="modal-input" type="text" placeholder="Наприклад: Андрій, трейдер" />
+        </div>
+        <div class="modal-field">
+          <label for="req-company">Компанія</label>
+          <input id="req-company" name="company" class="modal-input" type="text" placeholder="Назва компанії" />
+        </div>
+        <div class="modal-field">
+          <label for="req-product">Продукт та обсяг</label>
+          <input id="req-product" name="product" class="modal-input" type="text" placeholder="Напр.: дизель, 3 000 т / місяць" />
+        </div>
+        <div class="modal-field">
+          <label for="req-details">Деталі / напрямок</label>
+          <textarea id="req-details" name="details" class="modal-textarea" placeholder="Наприклад: напрямок ЖД, орієнтовний старт, особливі вимоги..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <div class="modal-info">
+            Форма відкриє лист у вашому поштовому клієнті з цими даними.
+          </div>
+          <button type="button" class="btn-secondary modal-close-secondary">Закрити</button>
+          <button type="submit" class="btn-modal-primary">Надіслати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
+    // Gallery
     (function() {
       const slides = Array.from(document.querySelectorAll('.gallery-slide'));
       const dots = Array.from(document.querySelectorAll('.gallery-dot'));
@@ -881,6 +1252,57 @@
           const idx = parseInt(dot.getAttribute('data-index'), 10);
           setSlide(idx);
         });
+      });
+    })();
+
+    // Modal: request form
+    (function() {
+      const modal = document.getElementById('request-modal');
+      const openButtons = document.querySelectorAll('[data-open-modal="request"]');
+      const closeButton = modal.querySelector('.modal-close');
+      const closeSecondary = modal.querySelector('.modal-close-secondary');
+      const form = document.getElementById('request-form');
+
+      function openModal() {
+        modal.classList.add('open');
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+      }
+
+      openButtons.forEach(btn => {
+        btn.addEventListener('click', openModal);
+      });
+
+      closeButton.addEventListener('click', closeModal);
+      closeSecondary.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('req-name').value.trim();
+        const company = document.getElementById('req-company').value.trim();
+        const product = document.getElementById('req-product').value.trim();
+        const details = document.getElementById('req-details').value.trim();
+
+        let body = '';
+        if (name) body += "Ім'я / контактна особа: " + name + "%0D%0A";
+        if (company) body += "Компанія: " + company + "%0D%0A";
+        if (product) body += "Продукт та обсяг: " + product + "%0D%0A";
+        if (details) body += "Деталі / напрямок: " + details + "%0D%0A";
+
+        const mailto = "mailto:acvatradelogistics2@gmail.com"
+          + "?subject=" + encodeURIComponent("Запит на співпрацю – АКВА ТРЕЙД ЛОГІСТІК")
+          + "&body=" + body;
+
+        window.location.href = mailto;
+        closeModal();
       });
     })();
   </script>
