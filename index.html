@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <title>АКВА ТРЕЙД ЛОГІСТІК – паливна логістика на Дунаї</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="АКВА ТРЕЙД ЛОГІСТІК – перевалка дизельного палива та бензину, навантаження у залізничні цистерни та автотранспорт. Надійна логістика пального від причалу до клієнта.">
+  <meta name="description" content="АКВА ТРЕЙД ЛОГІСТІК – перевалка дизельного палива та бензину, навантаження у залізничні цистерни та автотранспорт. Надійна логістика пального від причалу до клієнта." />
+  <meta property="og:title" content="АКВА ТРЕЙД ЛОГІСТІК – паливна логістика на Дунаї" />
+  <meta property="og:description" content="Пальне в русі, логістика під контролем: танкер, резервуар, залізничні цистерни та автотранспорт." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://22vtoroy.github.io/AcvaTradeLogisticc/" />
+  <meta property="og:image" content="hero-port.jpg" />
   <style>
     :root {
       --bg-page: #02040a;
@@ -43,8 +48,6 @@
       margin: 0 auto 72px;
       padding: 20px 18px 60px;
     }
-
-    /* HEADER */
 
     header {
       display: flex;
@@ -129,8 +132,6 @@
     nav a:hover::after {
       width: 100%;
     }
-
-    /* HERO */
 
     .hero {
       margin-top: 34px;
@@ -301,8 +302,6 @@
       color: var(--accent-muted);
     }
 
-    /* METRICS */
-
     .metrics {
       margin-top: 32px;
       border-radius: var(--radius-xl);
@@ -349,8 +348,6 @@
       margin-top: 10px;
     }
 
-    /* SECTIONS */
-
     section {
       margin-top: 42px;
     }
@@ -386,8 +383,6 @@
       margin-top: 4px;
     }
 
-    /* SERVICES */
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -412,8 +407,6 @@
       font-size: 13px;
       color: var(--text-muted);
     }
-
-    /* CLIENT TYPES */
 
     .clients-grid {
       display: grid;
@@ -455,8 +448,6 @@
       color: var(--accent-muted);
     }
 
-    /* FLOW STEPS */
-
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -488,8 +479,6 @@
       font-size: 13px;
       color: var(--text-muted);
     }
-
-    /* TANKER BANNER */
 
     .tanker-banner {
       margin-top: 40px;
@@ -532,8 +521,6 @@
       max-width: 420px;
       color: #e5e7eb;
     }
-
-    /* GALLERY */
 
     .gallery {
       margin-top: 44px;
@@ -634,8 +621,6 @@
       background: var(--accent);
     }
 
-    /* CONTACTS */
-
     .contacts {
       margin-top: 40px;
       display: grid;
@@ -688,8 +673,6 @@
       gap: 8px;
       flex-wrap: wrap;
     }
-
-    /* MODAL */
 
     .modal-backdrop {
       position: fixed;
@@ -880,7 +863,6 @@
       <nav>
         <a href="#about">Про нас</a>
         <a href="#services">Послуги</a>
-        <a href="#clients">Клієнти</a>
         <a href="#flow">Схема</a>
         <a href="#gallery">Галерея</a>
         <a href="#contacts">Контакти</a>
@@ -888,7 +870,6 @@
     </header>
 
     <main>
-      <!-- HERO -->
       <section class="hero" id="about">
         <div class="hero-media">
           <div class="hero-tagline">порт • резервуари • жд • автоцистерни</div>
@@ -941,7 +922,6 @@
         </div>
       </section>
 
-      <!-- METRICS -->
       <section class="metrics">
         <div class="metrics-grid">
           <div class="metric-item">
@@ -962,11 +942,10 @@
           </div>
         </div>
         <div class="metric-note">
-          Значення можуть бути адаптовані під фактичні обсяги та формат роботи компанії.
+          Значення можна легко змінити під фактичні обсяги та формат роботи компанії.
         </div>
       </section>
 
-      <!-- SERVICES -->
       <section id="services">
         <div class="section-header">
           <div class="section-left">
@@ -1003,7 +982,6 @@
         </div>
       </section>
 
-      <!-- CLIENT TYPES & CASES -->
       <section id="clients">
         <div class="section-header">
           <div class="section-left">
@@ -1047,7 +1025,6 @@
         </ul>
       </section>
 
-      <!-- FLOW -->
       <section id="flow">
         <div class="section-header">
           <div class="section-left">
@@ -1087,7 +1064,6 @@
         </div>
       </section>
 
-      <!-- TANKER BANNER -->
       <section class="tanker-banner">
         <div class="tanker-bg"></div>
         <div class="tanker-inner">
@@ -1102,7 +1078,6 @@
         </div>
       </section>
 
-      <!-- GALLERY -->
       <section class="gallery" id="gallery">
         <div class="section-header">
           <div class="section-left">
@@ -1142,7 +1117,6 @@
         </div>
       </section>
 
-      <!-- CONTACTS -->
       <section id="contacts">
         <div class="section-header">
           <div class="section-left">
@@ -1182,7 +1156,6 @@
     </footer>
   </div>
 
-  <!-- MODAL: REQUEST -->
   <div class="modal-backdrop" id="request-modal">
     <div class="modal">
       <div class="modal-header">
@@ -1223,7 +1196,6 @@
   </div>
 
   <script>
-    // Gallery
     (function() {
       const slides = Array.from(document.querySelectorAll('.gallery-slide'));
       const dots = Array.from(document.querySelectorAll('.gallery-dot'));
@@ -1255,7 +1227,6 @@
       });
     })();
 
-    // Modal: request form
     (function() {
       const modal = document.getElementById('request-modal');
       const openButtons = document.querySelectorAll('[data-open-modal="request"]');
