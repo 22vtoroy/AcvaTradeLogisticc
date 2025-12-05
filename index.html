@@ -10,6 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://22vtoroy.github.io/AcvaTradeLogisticc/" />
   <meta property="og:image" content="hero-port.jpg" />
+  <link rel="icon" type="image/png" href="favicon-atl.png" />
   <style>
     :root {
       --bg-page: #02040a;
@@ -448,6 +449,31 @@
       color: var(--accent-muted);
     }
 
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .benefit-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #020617, #02040a 70%);
+      border: 1px solid var(--border-soft);
+      padding: 16px 16px 14px;
+      min-height: 120px;
+    }
+
+    .benefit-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .benefit-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -477,6 +503,38 @@
 
     .step-text {
       font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .doc-card {
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(55,65,81,0.9);
+      background: #020617;
+      padding: 16px 16px 14px;
+    }
+
+    .doc-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-muted);
+      margin-bottom: 4px;
+    }
+
+    .doc-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .doc-text {
+      font-size: 12px;
       color: var(--text-muted);
     }
 
@@ -662,8 +720,31 @@
       color: var(--text-muted);
     }
 
+    .cta-next {
+      margin-top: 36px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at top left, #020617, #02040a 70%);
+      padding: 18px 20px 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .cta-title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .cta-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
     footer {
-      margin-top: 46px;
+      margin-top: 24px;
       padding-top: 16px;
       border-top: 1px solid rgba(15,23,42,0.9);
       font-size: 11px;
@@ -825,7 +906,9 @@
       }
       .services-grid,
       .steps-grid,
-      .clients-grid {
+      .clients-grid,
+      .benefits-grid,
+      .docs-grid {
         grid-template-columns: minmax(0,1fr);
       }
       .metrics-grid {
@@ -846,6 +929,10 @@
       .metric-item {
         border-left: none;
         padding-left: 0;
+      }
+      .cta-next {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -1025,6 +1112,48 @@
         </ul>
       </section>
 
+      <section id="benefits">
+        <div class="section-header">
+          <div class="section-left">
+            <div class="section-kicker">переваги</div>
+            <h2 class="section-title">Чому клієнти повертаються</h2>
+            <p class="section-sub">
+              Ключові принципи роботи, на яких тримається логістика АКВА ТРЕЙД ЛОГІСТІК.
+            </p>
+          </div>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <h3 class="benefit-title">Прозорий облік</h3>
+            <p class="benefit-text">
+              Фіксація обсягів на кожному етапі ланцюга: танкер, резервуар, ЖД та автоцистерни.
+              Дані готові для фінансової та податкової звітності.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <h3 class="benefit-title">Фокус на таймінги</h3>
+            <p class="benefit-text">
+              Планування операцій так, щоб мінімізувати простої суден, вагонів та автотранспорту.
+              Чітке розуміння вікон навантаження.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <h3 class="benefit-title">Гнучкий графік</h3>
+            <p class="benefit-text">
+              Робота у нічні зміни та вихідні за попередньою домовленістю. Підлаштовуємося під модель
+              бізнесу клієнта.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <h3 class="benefit-title">Персональний супровід</h3>
+            <p class="benefit-text">
+              Один контакт по всьому ланцюгу: від узгодження заходу танкера до відвантаження останньої
+              цистерни.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="flow">
         <div class="section-header">
           <div class="section-left">
@@ -1059,6 +1188,45 @@
             <p class="step-text">
               Навантаження цистерн, супровідні документи, узгодження відправлення та
               надання даних для бухгалтерії та звітності.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="documents">
+        <div class="section-header">
+          <div class="section-left">
+            <div class="section-kicker">документи</div>
+            <h2 class="section-title">Документальний супровід операцій</h2>
+            <p class="section-sub">
+              Повний пакет документів по перевалці та відвантаженням — для митниці, банків,
+              контрагентів в Україні та ЄС.
+            </p>
+          </div>
+        </div>
+        <div class="docs-grid">
+          <article class="doc-card">
+            <div class="doc-tag">основні</div>
+            <h3 class="doc-title">Митні та транспортні документи</h3>
+            <p class="doc-text">
+              Коносаменти, CMR, залізничні накладні, акти приймання-передачі, відомості зважування
+              та інші обов'язкові документи.
+            </p>
+          </article>
+          <article class="doc-card">
+            <div class="doc-tag">європейський напрямок</div>
+            <h3 class="doc-title">EUR.1 та сертифікати походження</h3>
+            <p class="doc-text">
+              Підготовка документів для підтвердження походження товару та роботи з пільговими
+              режимами торгівлі.
+            </p>
+          </article>
+          <article class="doc-card">
+            <div class="doc-tag">звітність</div>
+            <h3 class="doc-title">Зведені звіти по партіях</h3>
+            <p class="doc-text">
+              Підсумкові дані по кожному танкеру чи партії: обсяги, втрати в нормі, графік операцій,
+              розріз за ЖД та авто.
             </p>
           </article>
         </div>
@@ -1102,7 +1270,7 @@
             <button class="gallery-nav next" type="button" aria-label="Наступне фото">›</button>
           </div>
           <div class="gallery-footer">
-            <div class="gallery-caption">
+            <div class="gallery-caption" id="gallery-caption">
               Перевалка пального · ЖД та автоцистерни · танкери на підході.
             </div>
             <div class="gallery-dots">
@@ -1146,6 +1314,22 @@
               погоджуються після встановлення контакту.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="cta-next">
+        <div>
+          <div class="section-kicker">наступний крок</div>
+          <div class="cta-title">Готові обговорити наступний танкер або партію</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+          <p class="cta-text">
+            Напишіть, який продукт, обсяг та напрямок вас цікавить. Повернемося з пропозицією
+            по графіку та можливим вікнам відвантаження.
+          </p>
+          <button class="btn-primary" type="button" data-open-modal="request">
+            Надіслати запит
+          </button>
         </div>
       </section>
     </main>
@@ -1201,8 +1385,18 @@
       const dots = Array.from(document.querySelectorAll('.gallery-dot'));
       const prevBtn = document.querySelector('.gallery-nav.prev');
       const nextBtn = document.querySelector('.gallery-nav.next');
+      const captionEl = document.getElementById('gallery-caption');
 
       if (!slides.length) return;
+
+      const captions = [
+        'Перевалка пального на залізничні цистерни. Робочий процес на естакаді.',
+        'Автоцистерни на навантаженні в порту. Підготовка до відправлення.',
+        'Комплексна робота ЖД та автотранспорту на майданчику.',
+        'Танкер із паливом на підході до порту.',
+        'Робота з морськими партіями пального. Зйом танкера з рейсу.',
+        'Танкер на рейді. Пальне в русі від моря до клієнта.'
+      ];
 
       let current = 0;
 
@@ -1214,6 +1408,9 @@
         dots.forEach((dot, i) => {
           dot.classList.toggle('active', i === current);
         });
+        if (captions[current]) {
+          captionEl.textContent = captions[current];
+        }
       }
 
       prevBtn.addEventListener('click', () => setSlide(current - 1));
